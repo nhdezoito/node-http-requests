@@ -16,6 +16,13 @@ app.get('/health', function (req, res) {
   res.send('Hello World!');
 });
 
+app.get('/sleep/:time', function (req, res) {
+  setTimeout(function() {
+    console.log('Sleeping ' + req.params.time);
+    res.send('sleep ' + req.params.time);
+  }, req.params.time);
+});
+
 //app.listen(3000, function () {
 //  console.log('Example app listening on port 3000!');
 //});
