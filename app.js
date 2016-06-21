@@ -23,6 +23,10 @@ app.get('/sleep/:time', function (req, res) {
   }, req.params.time);
 });
 
+app.trace('/trace', function (req, res) {
+  res.send('must be empty');
+});
+
 //app.listen(3000, function () {
 //  console.log('Example app listening on port 3000!');
 //});
