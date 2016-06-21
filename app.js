@@ -1,3 +1,10 @@
+const http         = require('http'),
+      fs           = require('fs'),
+      path         = require('path'),
+      contentTypes = require('./utils/content-types'),
+      sysInfo      = require('./utils/sys-info'),
+      env          = process.env;
+
 var express = require('express');
 var app = express();
 
