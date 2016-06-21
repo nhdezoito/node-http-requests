@@ -20,6 +20,6 @@ app.get('/health', function (req, res) {
 //  console.log('Example app listening on port 3000!');
 //});
 
-server.listen(env.NODE_PORT || 3000, env.NODE_IP || 'localhost', function () {
+app.listen(env.NODE_PORT || 3000, env.NODE_IP || 'localhost', function () {
   console.log(`Application worker ${process.pid} started...`);
 });
