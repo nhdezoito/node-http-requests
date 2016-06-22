@@ -24,7 +24,12 @@ app.get('/sleep/:time', function (req, res) {
 });
 
 app.trace('/trace', function (req, res) {
-  res.send('must be empty');
+  var resp = 'TRACE /trace HTTP/1.1\n'
+  for (var i in req.headers) {
+    resp = resp + i + ': ' + req.headers[i] + '\n'
+  }
+  resp = resp + '\n'
+  res.send(resp);
 });
 
 //app.listen(3000, function () {
