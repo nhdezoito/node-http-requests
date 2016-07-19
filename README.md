@@ -10,6 +10,6 @@ The server shoud be running at:
 
 http://node-aguedesvirtus.rhcloud.com/
 
-https is avaliable at:
+https is available at:
 
 https://node-aguedesvirtus.rhcloud.com/
