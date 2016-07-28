@@ -81,6 +81,20 @@ app.options('/sleep/:time', function (req, res) {
     res.send('options request slept for ' + req.params.time);
   }, req.params.time);
 });
+
+app.post('/post', function (req, res) {
+    let resp = 'POST /post HTTP/1.1\n';
+    resp = resp + 'post request was sucessful.\n';
+    res.send(resp);
+});
+
+app.post('/sleep/:time', function (req, res) {
+  setTimeout(function() {
+    console.log('Sleeping ' + req.params.time);
+    res.send('post request slept for ' + req.params.time);
+  }, req.params.time);
+});
+
 //app.listen(3000, function () {
 //  console.log('Example app listening on port 3000!');
 //});
